@@ -5,7 +5,7 @@
 
 # Technololies used in this project
   1. React(mostly presentational)
-  2. Redux(complete state management)
+  2. Redux(complete state management in "DUCKS-ARCHITECTURE")
   3. thunk(async operations)
   4. Axios(fror Api calls)
   5. lodash
