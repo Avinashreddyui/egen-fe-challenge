@@ -1,6 +1,4 @@
-/**
- * Created by avvinash on 9/6/2017.
- */
+
 import React from "react";
 import {connect} from "react-redux";
 import * as searchReducer from "../AppDucksReducer/AppDucksReducer";
@@ -9,14 +7,19 @@ import _ from "lodash";
 class MainApp extends React.Component{
     constructor(props) {
         super(props);
+        this.aSort=this.aSort.bind(this);
+        this.dSort=this.dSort.bind(this);
     }
     componentDidMount(){
         this.props.getDataFromApi();
     }
-    componentDidUpdate(prevProps, prevState){
-       if(prevProps.results!==this.props.results){
-
-       }
+    aSort(e){
+      var asc_id=e.target.parentNode.className;
+      this.props.ascSort(asc_id);
+    }
+    dSort(e){
+        var dsc_ids=e.target.parentNode.className;
+        this.props.dscSort(dsc_ids);
     }
     render(){
         if(_.isEmpty(this.props.results)){
@@ -27,33 +30,33 @@ class MainApp extends React.Component{
                 <table>
                     <thead>
                     <tr>
-                        <th>ID
-                            <button onClick={()=>this.props.ascSort("id")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("id")}>DSC</button>
+                        <th className="id">ID
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th>distance_m
-                            <button onClick={()=>this.props.ascSort("distance_m")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("distance_m")}>DSC</button>
+                        <th className="distance_m">distance_m
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th>fuel_cost_used
-                            <button onClick={()=>this.props.ascSort("fuel_cost_used")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("fuel_cost_used")}>DSC</button>
+                        <th className="fuel_cost_used">fuel_cost_used
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th>average_kmpl
-                            <button onClick={()=>this.props.ascSort("average_kmpl")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("average_kmpl")}>DSC</button>
+                        <th className="average_kmpl">average_kmpl
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th >score_events
-                            <button onClick={()=>this.props.ascSort("score_events")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("score_events")}>DSC</button>
+                        <th className="score_events">score_events
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th >score_speeding
-                            <button onClick={()=>this.props.ascSort("score_speeding")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("score_speeding")}>DSC</button>
+                        <th className="score_speeding">score_speeding
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
-                        <th >idling_time_s
-                            <button onClick={()=>this.props.ascSort("idling_time_s")}>ASC</button>
-                            <button onClick={()=>this.props.dscSort("idling_time_s")}>DSC</button>
+                        <th className="idling_time_s">idling_time_s
+                            <button onClick={this.aSort}>ASC</button>
+                            <button onClick={this.dSort}>DSC</button>
                         </th>
                     </tr>
                     </thead>
