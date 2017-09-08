@@ -2,13 +2,13 @@
  * Created by avvinash on 9/6/2017.
  */
 import axios from "axios";
+import store from "../../store";
+
 export const FETCH_DATA_FAILURE="FETCH_DATA_FAILURE";
 export const FETCH_DATA_ON_SUCCESS="FETCH_DATA_ON_SUCCESS";
 export const SEARCH_TEXT="SEARCH_TEXT";
 export const CHANGE_TO_ASCENDING="CHANGE_TO_ASCENDING";
 export const CHANGE_TO_DESCENDING="CHANGE_TO_DESCENDING";
-import store from "../../store";
-
 
 const API="https://demo4169905.mockable.io/trip%3FvehicleId=C_09a95c0f8ccef871";
 
