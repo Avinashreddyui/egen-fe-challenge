@@ -1,6 +1,4 @@
-/**
- * Created by avvinash on 9/6/2017.
- */
+
 import React from "react";
 import {connect} from "react-redux";
 import * as searchReducer from "../AppDucksReducer/AppDucksReducer";
