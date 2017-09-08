@@ -1,6 +1,4 @@
-/**
- * Created by avvinash on 9/6/2017.
- */
+
 import axios from "axios";
 import store from "../../store";
 
