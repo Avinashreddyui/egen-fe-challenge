@@ -1,7 +1,7 @@
 # egen-fe-challenge
 
-npm install to install dependencies
-npm start to run project
+1. npm install (to install dependencies)
+2. npm start (to run project)
 
 # Technololies used in this project
   1. React(mostly presentational)
